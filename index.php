@@ -91,9 +91,100 @@ function lapCounter() {
   $lap++;
 }
 
-lapCounter();
-lapCounter();
-lapCounter();
+  lapCounter();
+  lapCounter();
+  lapCounter();
+
+  $myNumbers =array(3,54,6,7,4);
+
+
+  echo "First element in array is " . $myNumbers[0] . "<br/>";
+
+  echo "Second element in array is " . $myNumbers[1] . "<br/>" ;
+
+  echo "Third element in array is " . $myNumbers[2] . "<br/>";
+
+  echo "Fourth element in array is " . $myNumbers[3] . "<br/>";
+
+  echo "Fifth element in array is " . $myNumbers[4] . "<br/>";
+
+
+
+  $myNumbers[0]="ten";
+  $myNumbers[1]="tweenty";
+  $myNumbers[2]="thirty";
+  $myNumbers[3]="Fourty";
+  $myNumbers[4]="fifty";
+
+  echo "<hr>";
+
+  echo "First element in array is " . $myNumbers[0] . "<br/>";
+
+  echo "Second element in array is " . $myNumbers[1] . "<br/>" ;
+
+  echo "Third element in array is " . $myNumbers[2] . "<br/>";
+
+  echo "Fourth element in array is " . $myNumbers[3] . "<br/>";
+
+  echo "Fifth element in array is " . $myNumbers[4] . "<br/>";
+
+  echo "<hr>";
+
+
+
+
+              $salaries=array("abdulla"=>200,
+              "eva"=>340,
+              "humayra"=>500,
+              "rakin"=>600);
+
+              echo "Salary of abdulla is ". $salaries['abdulla' ] . "<br/>";
+              echo "Salary of eva is " . $salaries['eva']. "<br/>" ;
+              echo "Salary of humayra is ". $salaries['humayra'] . "<br/>";
+              echo "Salary of rakin is ". $salaries['rakin'] . "<br/>";
+             
+
+  echo "<hr>";
+  
+              
+              $salaries["abdulla"]=321;
+              $salaries["eva"]=901;
+              $salaries["humayra"]=600;
+              $salaries["rakin"]=546;
+
+
+              echo "Salary of abdulla is ". $salaries['abdulla' ] . "<br/>";
+              echo "Salary of eva is " . $salaries['eva']. "<br/>" ;
+              echo "Salary of humayra is ". $salaries['humayra'] . "<br/>";
+              echo "Salary of rakin is ". $salaries['rakin'] . "<br/>";
+
+  echo "<hr>";
+
+  $marks=array("abdulla"=>array("physics"=>70,
+                                "maths"=>90,
+                                "chamistry"=>78),
+                    "eva"=>array("physics"=>70,
+                                "maths"=>90,
+                                "chamistry"=>78),
+                "humayra"=>array("physics"=>90,
+                                "maths"=>85,
+                                "chamistry"=>75)
+                                
+                            );
+
+
+
+  echo "abdulla for Mark in Physics:👍 ";
+  echo $marks['abdulla']['physics' ] . "<br/>" ;
+  echo "eva for mark in chamistry 👍";
+  echo $marks["eva"]["chamistry"]."<br/>";
+  echo "humayra for mark in maths 👍";
+  echo $marks["eva"]["maths"]."<br/>";
+
+
+
+
+
 
 
 
