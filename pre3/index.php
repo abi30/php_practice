@@ -1,7 +1,17 @@
 
  
+<?php 
 
+require_once 'db_connect.php';
+$sql ="SELECT * FROM test";
+// $result=mysqli_query($connect,$sql);
 
+$result= mysqli_query($connect, $sql);
+$rows=mysqli_fetch_all($result,MYSQLI_ASSOC);
+echo "<pre>";
+var_dump($rows);
+echo "</pre>";
+?>
 
 <!doctype html>
 <html lang="en">
@@ -22,61 +32,21 @@
 <div class="container">
 <h1>helloo</h1>
   
-
+<a href="create.php">create new reord</a> <br><br>
 
 <?php 
+       $i = 0;
+       while($i < count($rows)){
 
+            echo "<p>" .$rows[$i][ 'first_name']." ".$rows[$i]['last_name' ]. "<a href ='delete.php?id=".$rows[$i]['id']."'>delete</a></p>" ;
 
-$a=0;
-$b=0;
-for ($i=0; $i <5 ; $i++) { 
-    $a+=10;
-    $b+=5;
-}
-
-echo ("at the end of the loop a = $a and b= $b </br>");
-
-
-$i=0;
-$num=50;
-while ($i<10){
-
-    $num--;
-    $i++;
-
-    if($i==5)break;
-}
-
-echo "loop stopped at i= $i and num is =$num.<br/>";
-
-$i = 0;
-       $num = 0;
-       do
-       {
            $i++;
+       }
 
-        } while ($i < 10);
-        $i-=1;
-
-        echo ("At the end of the loop i=$i <br/>" );
-
-
-
-        $array =array(1,3,45,3,6,9);
-        foreach($array as $value){
-
-            if($value ==3)continue;
-            echo "Value is $value <br/>";
-        }
-
-
-
-
-
-
-
-
-?>  
+       // foreach ($rows as $row) {
+        //     echo "<p>" .$row['first_name']." ".$row['last_name' ]."</p>";
+        // }
+       ?>
 
 </div>
 
