@@ -61,6 +61,233 @@ if(isset($_POST["submit"])){
 
 
 
+function printName(){
+  echo "abdulla Rakib 👍<br/>";
+}
+printName();
+
+
+
+function addFuction($num1,$num2){
+$sum=$num1+$num2;
+echo "sum of the two number is : $sum .<br/>";
+}
+addFuction(4,5);
+
+
+function addFuntionsForTree($n1,$n2,$n3){
+  $sumOfTree=$n1+$n2+$n3;
+  return $sumOfTree;
+
+}
+
+$return_value=addFuntionsForTree(4,6,57);
+echo "REturn value from the function(addFuntionsForTree): $return_value.<br/>";
+
+
+
+
+
+
+// function formatted_dump($content){
+//   echo "<pre>";
+//   var_dump($content);
+//   echo "</pre>";
+// }
+
+
+// $name = "abdulla";
+// function fullName(){
+//   $surname="rakib";
+
+//   $f_name= $GLOBALS["name"]." ".$GLOBALS["surname"];
+//   return $f_name;
+// }
+
+// formatted_dump($GLOBALS);
+
+
+
+
+
+$date = date("l");
+if($date == "Tuesday")
+  echo "It's Friday, weekend is around the corner....:-)<br/>";
+else 
+echo "Don't watch the clock ; do what it does, keep on going!<br/>" ;
+echo date('l')."<br/>";
+echo date('D')."<br/>";
+
+
+
+// $today = date("N");
+// if ($today==1){
+//   echo "It's saterday, let's get the week started";
+
+// }elseif ($today==2) {
+//    echo "It's Sunday, let's get the week started";
+// }
+// elseif ($today==3) {
+//    echo "It's Monday, let's get the week started";
+// }
+// elseif ($today==4) {
+//    echo "It's Tuesday, let's get the week started";
+// }
+// elseif ($today==5) {
+//    echo "It's Wednesday, let's get the week started";
+// }
+// elseif ($today==6) {
+//    echo "It's Thursday, let's get the week started";
+// }
+// else {
+//    echo "It's Friday, let's get the week started";
+// }
+
+
+
+
+
+
+
+$today = date("D");
+switch($today){
+   
+      case "Mon":
+echo "It's Monday, let's get the week started<br/>";
+break;
+      case "Tue":
+ echo "It's Tuesday, let's get the week started<br/>";
+ break;
+      case "Wed":
+ echo "It's Wednesday, let's get the week started<br/>";
+ break;
+      case "Thu":
+echo "It's Thursday, let's get the week started<br/>";
+break;
+      case "Fri":
+echo "It's Friday, let's get the week started<br/>";
+break;   
+      case "Sat":
+ echo "It's saterday, let's get the week started<br/>";
+ break;
+      case "Sun":
+ echo "It's Sunday, let's get the week started<br/>";
+ break;
+      default :
+echo "If you seeing this mesage something went wrong:)<br/>";        
+
+ 
+}
+
+
+
+
+
+$today = date("D");
+switch ($today) {
+    case "Mon":
+         echo "Today is Monday <br/>";
+        break;
+    case "Tue":
+         echo "Today is Tuesday <br/>";
+        break;
+    case "Wed":
+         echo "Today is Wednesday <br/>";
+        break;
+    case "Thu":
+         echo "Today is Thursday <br/>";
+        break;
+    case "Fri":
+         echo "Today is Friday <br/>";
+        break;
+    case "Sat":
+         echo "Today is Saturday <br/>";
+        break;
+    case "Sun":
+         echo "Today is Sunday <br/>";
+        break;
+    default:
+        echo  "If you seeing this message, something went wrong :) <br/>";
+}
+
+
+
+$session = "rakib";
+$other= "ohter people";
+$user = ($session =="rakib") ? $session : $other;
+echo $user ."<br/>";
+
+
+function confirm(){
+echo "affirmative <br/>";
+}
+function deny(){
+  echo "negative<br/>";
+}
+(10>4)? confirm():deny();
+
+
+
+$varone = 4>3;
+$vartwo = 4<3;
+$vartree = null;
+
+echo ($varone ? "statement is true .<br/>":"the condition was false or null")."<br>";
+echo ($vartwo ? "statement is true .<br/>":"the condition was false or null")."<br>";
+echo ($vartree ? "statement is true .<br/>":"the condition was false or null")."<br>";
+
+
+
+echo (@$varfour ? "statement is true .<br/>":"the condition does't not exist")."<br>";
+
+
+
+$var1  = 42;
+$var2 = null;
+
+echo ($var1 ?? "the condition was false or null")."<br>";
+echo ($var2 ??"the condition was false or null")."<br>";
+echo ($var3 ??"the condition doesn't exist")."<br>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>  
 
@@ -69,7 +296,6 @@ if(isset($_POST["submit"])){
 </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
